@@ -6,7 +6,6 @@ Now it's time to set up the models. To start with, I have tables for Users, Post
 - Major languages:Ruby, Javascript, HTML & CSS
 - Main database: postgresql
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -38,7 +37,6 @@ rails server
 - GitHub: [@Piercel2022](https://github.com/Piercel2022)
 - Twitter: [@pier_celestin](https://twitter.com/pier_celestin)
 - LinkedIn: [@piercelestinmax](https://linkedin.com/in/piercelestinmax)
-
 
 ## 🤝 Contributing
 
