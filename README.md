@@ -1,6 +1,5 @@
-## Blog App - processing data in models
-Now it's time to set up the models. To start with, I have tables for Users, Posts, Comments, and Likes, which means I need a model for each one. 
-After creating the models, I will then insert the data by using those models
+## Blog App - Controllers
+We setup for this project, the controllers for the blog
 ## Built With
 
 - Major languages:Ruby, Javascript, HTML & CSS
