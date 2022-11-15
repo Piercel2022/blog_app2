@@ -1,6 +1,6 @@
-## Blog App - Controllers
+## Blog app - controllers specs
 
-We setup for this project, the controllers for the blog
+I write tests for controllers
 
 ## Built With
 
