@@ -1,6 +1,18 @@
 <h1>Welcome to the rails blog app </h1>
 
-<p> <%= @post.id %> </p>
-<p> <%= @post.author_id %> </p>
-<p> <%= @post.title %> </p>
-<p> <%= @post.text %> </p>
+<div>
+  <ul>
+    <% @posts.each do |post| %>
+      <li>
+        <h3 class="mb-2 text-sm font-bold"><%= post.title %> #<%= post.id %></h3>
+        <p><%= post.text %></p>
+        <p>Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p>
+        <ul>
+          <% post.recent_comments.each do |comment| %>
+            <li><%= comment.author.name %> : <%= comment.text %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</div>
