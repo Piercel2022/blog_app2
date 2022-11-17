@@ -1,6 +1,8 @@
+
 ## Blog App - Views
 
 The design is implemented from the sneak peek wireframes. The data that is displaying here in the view are the database records that was entered before when I implemented the database. So now the view show these records.
+
 
 ## Built With
 
