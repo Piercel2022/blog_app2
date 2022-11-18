@@ -14,9 +14,11 @@ h1 {
   width: 70%;
   margin-left: 7.9em;
 }
+
 .user_bio p {
   padding: 3em;
 }
+
 .user_container2 {
   display: flex;
   justify-content: space-around;
@@ -45,6 +47,7 @@ h1 {
 .comments h2 {
   font-size: 21px;
 }
+
 .comment_container h2 {
   font-size: 15px;
 }
@@ -72,6 +75,7 @@ h1 {
   border-radius: 8px;
   margin-left: 7.9em;
 }
+
 img {
   position: relative;
   top: 13em;
