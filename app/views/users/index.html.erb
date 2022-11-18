@@ -1,17 +1,13 @@
-<h1>Users</h1>
-
-<section>
 <% @users.each do |user| %>
-    <%= link_to users_path(user.id) do %>
-      <div class="container">
-          <div class="user_pic">
-            <img src="<%= user.photo %>" />
-          </div>
-          <div class="user">
-            <h1><%= user.name %></h1>
-            <p>Number of posts: <%= user.posts_counter || 0 %></p>
-          </div>
-          </div>
-    <% end %>
-<% end %>
-</section
+  <div class="user_container">
+    <div class="user_img">
+      <%= image_tag("profile-picture.jpg", width:'100vw', height:'100%') %>
+    </div>
+    <div class="user_data">
+      <%= link_to user_path(user.id) do %>
+      <h2><%= user.name%></h2>
+      <p>Number of posts: <%= user.posts_counter %></p>
+      <% end %>
+    </div>
+  </div>
+<%end%>
