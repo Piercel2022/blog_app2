@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  display: flex;
+  gap: 1em;
+}
+
+.user {
+  border: 2px solid black;
+  width: 20em;
+  padding: 3em;
+  margin: 2em;
+  gap: 0.2em;
+}
+
+.user_pic {
+  width: 4em;
+  padding: 3em;
+  margin: 2em;
+}
+
+.bio {
+  border: 2px solid black;
+  width: 50%;
+}

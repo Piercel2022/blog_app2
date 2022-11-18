@@ -1,1 +1,14 @@
-<h1> Placeholder for the post</h1>
+<h1>Show post</h1>
+
+<div class="user_container">
+    <div class="user_data_post"> 
+    <h3>Post#<%= @post.id %> by Username</h3>
+    <p><%= @post.text%></p>
+      <div class="comments-likes">Comment <%= @post.comments_counter%>,  <span>Likes <%= @post.likes_counter%></span></div>
+    </div>
+    <div class="comments">
+    <% @comments.each do |comment| %>
+       <h2><%= comment.user%>: <%= comment.text%></h2>
+    <%end%>
+  </div>
+<div>
