@@ -1,7 +1,7 @@
 
-## Blog App - Views
+## Blog App - Add Forms
 
-The design is implemented from the sneak peek wireframes. The data that is displaying here in the view are the database records that was entered before when I implemented the database. So now the view show these records.
+In this project I added some forms for interacting with the user to enter data in the form and then submit these data to the database. The records are present in the database after they have been enter to the forms.
 
 
 ## Built With
