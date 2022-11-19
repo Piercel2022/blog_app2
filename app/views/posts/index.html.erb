@@ -1,29 +1,17 @@
 
-<div class="user_container">
-    <div class="user_data">
-      <h2><%= @user.name%></h2>
-      <p>Number of posts: <%= @user.posts_counter %></p>
-    </div>
-  </div>
-
-
+<div>
   <ul>
-  <% @posts.each do |post| %>
-  <li>
-     <div class="user_data_post"><h2>Post#<%= post.id %></h2>
-      <p><%= post.text%></p>
-      <p class="comments-likes">Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p></div></li>
-    <ul class="username-comments">
-          <% post.recent_5_comments.each do |comment| %>
-            <li><%= "Username" %> : Comment <%=  comment.author_id %></li>
+    <% @posts.each do |post| %>
+      <li>
+        <h3 class="mb-2 text-sm font-bold"><%= post.title %> #<%= post.id %></h3>
+        <p><%= post.text %></p>
+        <p>Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p>
+        <ul>
+          <% post.five_most_recent_comments.each do |comment| %>
+            <li><%= comment.author.name %> : <%= comment.text %></li>
           <% end %>
         </ul>
-   </li>
-<%end%>
-</ul>
-
-<div class="button-wrapper">
-  <button class="button">
-      Pagination
-  </button>
+      </li>
+    <% end %>
+  </ul>
 </div>
