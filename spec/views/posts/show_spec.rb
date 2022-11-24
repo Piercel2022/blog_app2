@@ -14,4 +14,8 @@ RSpec.describe 'User post', type: :feature do
   it 'renders posts title ' do
     expect(page.html).to include(@post_one.title)
   end
+
+  it 'renders who wrote the post ' do
+    expect(page.html).to include(@user.name)
+  end
 end
