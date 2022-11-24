@@ -1,17 +1,10 @@
-
-<div>
-  <ul>
-    <% @posts.each do |post| %>
-      <li>
-        <h3 class="mb-2 text-sm font-bold"><%= post.title %> #<%= post.id %></h3>
-        <p><%= post.text %></p>
-        <p>Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p>
-        <ul>
-          <% post.five_most_recent_comments.each do |comment| %>
-            <li><%= comment.author.name %> : <%= comment.text %></li>
-          <% end %>
-        </ul>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<section id="users">
+  <%= render "shared/user_details", user: @user %>
+</section>
+<section id="recent-posts">
+  <%@posts.each_with_index do |post, index|%>
+    <%= render 'shared/post_excerpt', post: post, index: index %>
+    <%= render 'shared/comments', post: post, limit_comments: true %>
+  <% end %>
+  <button class="btn see-posts">Pagination</button>
+</section
