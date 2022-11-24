@@ -1,0 +1,13 @@
+<% if post.comments.length.positive? %>
+  <div class="comments">
+    <% if defined?(limit_comments)  %>
+      <% post.recent_five.each do |comment| %>
+        <%= render 'shared/comment', comment: comment %>
+      <% end %>
+    <% else %>
+      <% post.comments.each do |comment| %>
+        <%= render 'shared/comment', comment: comment %>
+      <% end %>
+    <% end %>
+  </div>
+<%end%>

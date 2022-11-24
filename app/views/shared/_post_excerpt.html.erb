@@ -1,0 +1,7 @@
+<div class="post">
+  <h4><%= link_to "Post ##{index+1}", user_post_path(@user, post)%></h4>
+  <p>
+    <%= link_to post.title, user_post_path(@user, post) %>
+  </p>
+  <span class="reaction-count">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
+</div>
