@@ -15,7 +15,7 @@ RSpec.describe 'Post index page', type: :feature do
     expect(page.html).to include(@user.photo)
   end
 
-  it 'show username of a given user' do
+  it 'shows username of a given user' do
     expect(page).to have_content('Elon Musk')
   end
 
@@ -47,6 +47,4 @@ RSpec.describe 'Post index page', type: :feature do
     click_link @post_one.title
     expect(page).to have_current_path(user_post_path(@user.id, @post_one))
   end
-
-  
 end
