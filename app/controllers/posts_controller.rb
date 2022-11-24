@@ -1,36 +1,30 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(author_id: params[:user_id])
     @user = User.find(params[:user_id])
+    @posts = @user.posts.includes(:comments)
   end
 
   def show
     @post = Post.find(params[:id])
-    @user = User.find(params[:user_id])
+    @post_text = @post.text
+    @author = @post.author.name
+    @comments = @post.comments
+    @comments_count = @post.comments.length
+    @likes_count = @post.likes.length
   end
 
   def new
     @post = Post.new
-    @user = current_user
-    @id = params[:user_id]
   end
 
   def create
-    @post = Post.create(post_params)
-    @user = current_user
-    @post.author_id = @user.id
+    @post = Post.new(post_params)
+    @post.author = current_user
 
-    # respond_to block
-    respond_to do |f|
-      f.html do
-        if @post.save
-          flash[:success] = 'Post created successfully!'
-          redirect_to "/users/#{@user.id}/posts/"
-        else
-          flash.now[:error] = 'Error creating post!'
-          render :new
-        end
-      end
+    if @post.save
+      redirect_to user_posts_path
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -38,9 +32,5 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text)
-  end
-
-  def comment_params
-    params.require(:form_comment).permit(:text)
   end
 end

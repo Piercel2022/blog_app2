@@ -1,24 +1,17 @@
-    <section class="users-show">
-    <div>
-        <img src="<%= @user.photo %>" />
-        <h1><%= @user.name %></h1>
-        <p>Number of posts:<%= @user.posts_counter || 0 %></p>
-        <p><%= @user.bio %></p>
-    </div>
-
- 
+<section id="users">
+  <%= render 'shared/user_details', user: @user %>
 </section>
-   <div>
-    <% @user.posts.each do |e| %>
-        <div class="posts">
-            <h1>Post: <%= e.title %></h1>
-            <p><%= e.text %></p>
-            <div>
-            <span>Comments:<%= e.comments_counter || 0%></span>
-            <span>Likes:<%= e.likes_counter || 0%></span>
-            </div>
-          </div>
-    <% end %>
-    <%= link_to "Add New Post", "/users/#{@user.id}/posts/new", {:class => "see_all_post"}%>
-<button><%=link_to "See all posts", user_posts_path(@user) %></button>
-    </div>
+<section id="bio">
+  <h4>Bio</h4>
+  <p>
+    <%= @user.bio %>
+  </p>
+</section>
+<section id="recent-posts">
+  <% @recent_posts.each_with_index do |post, index| %>
+    <%= render 'shared/post_excerpt', post: post, index: index %>
+  <% end %>
+  <button class="btn see-posts">
+    <%= link_to 'See all posts', user_posts_path(@user) %>
+  </button>
+</section>

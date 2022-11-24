@@ -27,12 +27,8 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-# Rubocop
-gem 'rubocop', '>= 1.0', '< 2.0'
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
-gem 'rspec-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -54,10 +50,9 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'bullet'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'ffi'
   gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 6.0.0'
 end
 
 group :development do
@@ -77,3 +72,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'rubocop', '>= 1.0', '< 2.0'

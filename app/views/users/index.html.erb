@@ -1,18 +1,8 @@
 
-<h1>Users</h1>
+<h1 class="title">Users</h1>
 
-<section>
-<% @users.each do |user| %>
-    <%= link_to user_path(user.id) do %>
-        <div class="user">
-          <div>
-            <img src="<%= user.photo %>" />
-          </div>
-          <div>
-            <h1><%= user.name %></h1>
-            <p>Number of posts: <%= user.posts_counter || 0 %></p>
-          </div>
-        </div>
-    <% end %>
-<% end %>
+<section id="users">
+  <% @users.each do |user| %>
+    <%= render 'shared/user_details', user: user %>
+  <% end %>
 </section>

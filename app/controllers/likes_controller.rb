@@ -1,13 +1,23 @@
 class LikesController < ApplicationController
+  before_action :set_post, only: [:create]
+
   def create
-    @post = Post.find(params[:id])
-    # new object from params
-    @like = Like.new(author_id: current_user.id, post_id: @post.id)
+    @like = Like.new
+    @like.post = @post
+    @like.author = current_user
+
     if @like.save
-      flash[:success] = 'You liked the post!'
-      redirect_to user_post_path
+      # redirect_to the just liked post
+      redirect_to user_post_path(@post.author, @post)
     else
-      flash.now[:error] = 'Error: Post could not be liked'
+      render :new, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  # liked post
+  def set_post
+    @post = Post.find(params[:post_id])
   end
 end
