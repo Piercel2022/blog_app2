@@ -13,3 +13,150 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* users section */
+#users {
+  padding: 25px 0;
+}
+
+#users .avatar {
+  border: 3px solid #000;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#users .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#users .info {
+  border: 3px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  min-width: 300px;
+  padding: 15px;
+}
+
+#users .info h2 {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+#users .info span {
+  position: relative;
+  top: 10px;
+}
+
+/* user show view */
+#bio {
+  border: 3px solid #000;
+  padding: 5px 5px 15px 5px;
+}
+
+#bio h4 {
+  margin-bottom: 14px;
+}
+
+.post {
+  border: 3px solid #000;
+  margin-top: 18px;
+  padding: 5px 5px 15px 5px;
+  position: relative;
+}
+
+.post p {
+  margin-top: 14px;
+}
+
+#recent-posts .btn {
+  display: block;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #000;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+#recent-posts .text {
+  margin-left: 4px;
+}
+
+/* comments */
+.comments {
+  border: 3px solid #000;
+  padding: 5px 5px 15px 5px;
+  margin-top: 1px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+}
+
+#post .comment h4 {
+  margin: 0;
+}
+
+#post .comment span {
+  margin-left: 4px;
+}
+
+/* post */
+#post .post header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#post .add-comment a,
+.like-btn input {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#post .like-btn input {
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+#post .reaction-btns {
+  display: flex;
+  align-items: center;
+}
+
+.post .reaction-count {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+}
