@@ -131,7 +131,7 @@ To run tests, run the following command:
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/Piercel2022/blog_app/issues).
 
 ## Show your support
 
