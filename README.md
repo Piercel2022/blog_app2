@@ -1,7 +1,7 @@
 
-## Blog App - Add Forms
+## Blog App - Integration specs
 
-In this project I added some forms for interacting with the user to enter data in the form and then submit these data to the database. The records are present in the database after they have been enter to the forms.
+In this project, you will create integration tests for all of the views used in your project. Be sure to cover the user stories (or user workflows) that you want your users to experience while taking into consideration the possible errors your users may cause.
 
 
 ## Built With
