@@ -11,4 +11,8 @@ RSpec.describe 'User post', type: :feature do
 
     visit user_post_path(@user, @post_one.id)
   end
+
+  it 'renders who wrote the post' do
+    expect(page).to have_content(@user.name)
+  end
 end
