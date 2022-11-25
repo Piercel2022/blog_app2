@@ -14,10 +14,6 @@ RSpec.describe 'Users', type: :request do
     it 'renders index template' do
       expect(response).to render_template('index')
     end
-
-    it 'renders placeholder for the response body' do
-      expect(response.body).to include('Here is a list of all users')
-    end
   end
 
   # show
@@ -32,10 +28,6 @@ RSpec.describe 'Users', type: :request do
 
     it 'renders index template' do
       expect(response).to render_template('show')
-    end
-
-    it 'renders placeholder for the response body' do
-      expect(response.body).to include('Here is a list of one user fetched by their id')
     end
   end
 end
