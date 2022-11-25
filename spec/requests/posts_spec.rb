@@ -15,9 +15,6 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template('index')
     end
 
-    it 'renders placeholder for the response body' do
-      expect(response.body).to include('Here is a list of all posts for a given user')
-    end
   end
 
   # show
@@ -34,8 +31,5 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template('show')
     end
 
-    it 'renders placeholder for the response body' do
-      expect(response.body).to include('Here is a view of a post for a given user')
-    end
   end
 end
