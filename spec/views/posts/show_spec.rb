@@ -15,4 +15,8 @@ RSpec.describe 'User post', type: :feature do
   it 'renders who wrote the post' do
     expect(page).to have_content(@user.name)
   end
+
+  it 'renders comments count of the post' do
+    expect(page).to have_content(0)
+  end  
 end
