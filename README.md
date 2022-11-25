@@ -1,63 +1,137 @@
 
-## Blog App - Integration specs
+# 📖 [Blog App - Integration specs] <a name="about-project"></a>
 
-In this project, you will create integration tests for all of the views used in your project. Be sure to cover the user stories (or user workflows) that you want your users to experience while taking into consideration the possible errors your users may cause.
+> n this project, you will create integration tests for all of the views used in your project. 
+ Cover the user stories (or user workflows) that we want your users to experience while taking into consideration the possible errors the users may cause.
 
+**[Blog App]** is an application built with the web application framework that use the gem Capybara to make integration tests
 
-## Built With
+## 🛠 Built With <a name="built-with">Rails</a>
 
-- Major languages:Ruby, Javascript, HTML & CSS
-- Main database: postgresql
+### Tech Stack <a name="tech-stack">Ruby On Rails</a>
 
-## Getting Started
+> Ruby On Rails, PostgreSQL and Rspec
 
-To get a local copy up and running follow these simple example steps.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://rubygems.org/gems/capybara/">Capybara gem</a></li>
+  </ul>
+</details>
 
-### Install :
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org">Rails Server</a></li>
+  </ul>
+</details>
 
-- RubyGems with:
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+> The  key features of the application.
+
+- **[Integration tests with Capybara gem]**
+- **[Secure app from n+1 problems]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> This is how you as a developer could make use of this project.
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need
+
+<!--
+Example command:
+
+```sh
+ gem install rails
 ```
-gem bundle install
+ -->
+
+### Setup
+
+Clone this repository [blog app](https://github.com/Piercel2022/blog_app) to your desired folder
+
+<!--
+Example commands:
+
+```sh
+  git clone https://github.com/Piercel2022/blog_app.git
+  cd blog_app
+```
+--->
+
+### Install
+
+Install this project with the web application framework: Ruby On Rails
+
+```sh
+  cd blog_app
+  bundle install
+```
+--->
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  rails server
+```
+--->
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  bin/rails rspec spec
 ```
 
-- Rails with:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```
-gem install rails
-```
+<!-- AUTHORS -->
 
-## Setup
+## 👥 Authors <a name="authors"></a>
 
-- Proceed with this command to setup the project with postgresql:
+> All the collaborators of this project.
 
-```
-rails new blog_app --database=postgresql
-```
-
-- Then after
-
-```
-cd blog_app
-```
-
-- To run this project, run the following command:
-
-```
-rails server
-```
-
-## Author
-
+👤 **Author1**
 - GitHub: [@Piercel2022](https://github.com/Piercel2022)
 - Twitter: [@pier_celestin](https://twitter.com/pier_celestin)
 - LinkedIn: [@piercelestinmax](https://linkedin.com/in/piercelestinmax)
 
-## 🤝 Contributing
+👤 **Author2**
 
+- GitHub: [@githubhandle](https://github.com/alphayowakarindi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alphayo-wakarindi-15a825236/)
+- Twitter [Twitter](https://twitter.com/alphayowakarind)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page]().
 
 ## Show your support
 
